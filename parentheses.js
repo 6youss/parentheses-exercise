@@ -1,11 +1,13 @@
-function isValidParentheses(str) {
-  const map = {
+const map = {
     "(": ")",
     "[": "]",
     "{": "}"
-  };
+};
+
+function isValidParentheses(str) {
   const stack = [];
-  for (let char of str) {
+  
+  for (const char of str) {
     if (isOpeningChar(char)) {
       stack.push(char);
       continue;
